@@ -1,0 +1,12 @@
+{
+  "main": "../bundles/omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.umd.js",
+  "module": "../fesm5/omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.js",
+  "es2015": "../fesm2015/omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.js",
+  "esm5": "../esm5/lazy/omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.js",
+  "esm2015": "../esm2015/lazy/omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.js",
+  "fesm5": "../fesm5/omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.js",
+  "fesm2015": "../fesm2015/omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.js",
+  "typings": "omnichannel2-commercial-plataform-wallet-management-front-bfcl-lazy.d.ts",
+  "sideEffects": false,
+  "name": "@omnichannel2-commercial-plataform-wallet-management/front-bfcl/lazy"
+}

@@ -1,0 +1,20 @@
+import { Injectable } from '@angular/core';
+import { HttpResponse } from '@angular/common/http';
+import { iif, of, throwError } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
+import * as i0 from "@angular/core";
+export class ErrorHandlerInterceptor {
+    intercept(req, next) {
+        return next.handle(req).pipe(mergeMap(event => iif(() => event instanceof HttpResponse, of(event).pipe(mergeMap(response => {
+            var _a, _b, _c, _d;
+            return ((_a = response.body) === null || _a === void 0 ? void 0 : _a.code) === 'ok' && ((_c = (_b = response.body) === null || _b === void 0 ? void 0 : _b.message) === null || _c === void 0 ? void 0 : _c.responseCode) === 'OK' ?
+                of(response) : throwError((_d = response.body) === null || _d === void 0 ? void 0 : _d.message.respuesta);
+        })), of(event))));
+    }
+}
+/** @nocollapse */ ErrorHandlerInterceptor.ɵfac = function ErrorHandlerInterceptor_Factory(t) { return new (t || ErrorHandlerInterceptor)(); };
+/** @nocollapse */ ErrorHandlerInterceptor.ɵprov = i0.ɵɵdefineInjectable({ token: ErrorHandlerInterceptor, factory: ErrorHandlerInterceptor.ɵfac });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ErrorHandlerInterceptor, [{
+        type: Injectable
+    }], null, null); })();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXJyb3ItaGFuZGxlci5pbnRlcmNlcHRvci5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BvbW5pY2hhbm5lbDItY29tbWVyY2lhbC1wbGF0YWZvcm0td2FsbGV0LW1hbmFnZW1lbnQvZnJvbnQtY29tbW9uLyIsInNvdXJjZXMiOlsibGliL2J1c2luZXNzLWFwaS9pbnRlcmNlcHRvcnMvZXJyb3ItaGFuZGxlci5pbnRlcmNlcHRvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzNDLE9BQU8sRUFBd0QsWUFBWSxFQUFFLE1BQU0sc0JBQXNCLENBQUM7QUFDMUcsT0FBTyxFQUFFLEdBQUcsRUFBYyxFQUFFLEVBQUUsVUFBVSxFQUFFLE1BQU0sTUFBTSxDQUFDO0FBQ3ZELE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQzs7QUFNMUMsTUFBTSxPQUFPLHVCQUF1QjtJQUVuQyxTQUFTLENBQUMsR0FBcUIsRUFBRSxJQUFpQjtRQUNqRCxPQUFPLElBQUksQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUMsSUFBSSxDQUMzQixRQUFRLENBQUMsS0FBSyxDQUFDLEVBQUUsQ0FBQyxHQUFHLENBQ3BCLEdBQUcsRUFBRSxDQUFDLEtBQUssWUFBWSxZQUFZLEVBQ25DLEVBQUUsQ0FBQyxLQUFvQyxDQUFDLENBQUMsSUFBSSxDQUM1QyxRQUFRLENBQUMsUUFBUSxDQUFDLEVBQUU7O1lBQ25CLE9BQUEsT0FBQSxRQUFRLENBQUMsSUFBSSwwQ0FBRSxJQUFJLE1BQUssSUFBSSxJQUFJLGFBQUEsUUFBUSxDQUFDLElBQUksMENBQUUsT0FBTywwQ0FBRSxZQUFZLE1BQUssSUFBSSxDQUFDLENBQUM7Z0JBQzlFLEVBQUUsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxPQUFDLFFBQVEsQ0FBQyxJQUFJLDBDQUFFLE9BQU8sQ0FBQyxTQUFTLENBQUMsQ0FBQTtTQUFBLENBQUMsQ0FDOUQsRUFDRCxFQUFFLENBQUMsS0FBSyxDQUFDLENBQ1QsQ0FBQyxDQUNGLENBQUM7SUFDSCxDQUFDOzs4RkFkVyx1QkFBdUI7K0RBQXZCLHVCQUF1QixXQUF2Qix1QkFBdUI7a0RBQXZCLHVCQUF1QjtjQURuQyxVQUFVIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSW5qZWN0YWJsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5pbXBvcnQgeyBIdHRwRXZlbnQsIEh0dHBIYW5kbGVyLCBIdHRwSW50ZXJjZXB0b3IsIEh0dHBSZXF1ZXN0LCBIdHRwUmVzcG9uc2UgfSBmcm9tICdAYW5ndWxhci9jb21tb24vaHR0cCc7XHJcbmltcG9ydCB7IGlpZiwgT2JzZXJ2YWJsZSwgb2YsIHRocm93RXJyb3IgfSBmcm9tICdyeGpzJztcclxuaW1wb3J0IHsgbWVyZ2VNYXAgfSBmcm9tICdyeGpzL29wZXJhdG9ycyc7XHJcblxyXG5pbXBvcnQgeyBSZXNwb25zZSB9IGZyb20gJy4uLy4uL21vZGVscyc7XHJcblxyXG5cclxuQEluamVjdGFibGUoKVxyXG5leHBvcnQgY2xhc3MgRXJyb3JIYW5kbGVySW50ZXJjZXB0b3IgaW1wbGVtZW50cyBIdHRwSW50ZXJjZXB0b3Ige1xyXG5cclxuXHRpbnRlcmNlcHQocmVxOiBIdHRwUmVxdWVzdDxhbnk+LCBuZXh0OiBIdHRwSGFuZGxlcik6IE9ic2VydmFibGU8SHR0cEV2ZW50PGFueT4+IHtcclxuXHRcdHJldHVybiBuZXh0LmhhbmRsZShyZXEpLnBpcGUoXHJcblx0XHRcdG1lcmdlTWFwKGV2ZW50ID0+IGlpZihcclxuXHRcdFx0XHQoKSA9PiBldmVudCBpbnN0YW5jZW9mIEh0dHBSZXNwb25zZSxcclxuXHRcdFx0XHRvZihldmVudCBhcyBIdHRwUmVzcG9uc2U8UmVzcG9uc2U8YW55Pj4pLnBpcGUoXHJcblx0XHRcdFx0XHRtZXJnZU1hcChyZXNwb25zZSA9PlxyXG5cdFx0XHRcdFx0XHRyZXNwb25zZS5ib2R5Py5jb2RlID09PSAnb2snICYmIHJlc3BvbnNlLmJvZHk/Lm1lc3NhZ2U/LnJlc3BvbnNlQ29kZSA9PT0gJ09LJyA/XHJcblx0XHRcdFx0XHRcdFx0b2YocmVzcG9uc2UpIDogdGhyb3dFcnJvcihyZXNwb25zZS5ib2R5Py5tZXNzYWdlLnJlc3B1ZXN0YSkpXHJcblx0XHRcdFx0KSxcclxuXHRcdFx0XHRvZihldmVudClcclxuXHRcdFx0KSlcclxuXHRcdCk7XHJcblx0fVxyXG5cclxufVxyXG4iXX0=

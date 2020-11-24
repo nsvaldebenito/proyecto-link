@@ -1,0 +1,29 @@
+{
+  "name": "@omnichannel2-commercial-plataform-wallet-management/front-common",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "9.1.0",
+    "@angular/core": "9.1.0",
+    "@angular/forms": "9.1.0",
+    "@angular/router": "9.1.0",
+    "@omnichannel2-common/ui": "^1.0.5",
+    "@angular/material": "9.1.0",
+    "@angular/cdk": "9.1.0",
+    "subsink": "^1.0.1"
+  },
+  "main": "bundles/omnichannel2-commercial-plataform-wallet-management-front-common.umd.js",
+  "module": "fesm5/omnichannel2-commercial-plataform-wallet-management-front-common.js",
+  "es2015": "fesm2015/omnichannel2-commercial-plataform-wallet-management-front-common.js",
+  "esm5": "esm5/omnichannel2-commercial-plataform-wallet-management-front-common.js",
+  "esm2015": "esm2015/omnichannel2-commercial-plataform-wallet-management-front-common.js",
+  "fesm5": "fesm5/omnichannel2-commercial-plataform-wallet-management-front-common.js",
+  "fesm2015": "fesm2015/omnichannel2-commercial-plataform-wallet-management-front-common.js",
+  "typings": "omnichannel2-commercial-plataform-wallet-management-front-common.d.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.10.0"
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "main": "../bundles/omnichannel2-commercial-plataform-wallet-management-front-common-config.umd.js",
+  "module": "../fesm5/omnichannel2-commercial-plataform-wallet-management-front-common-config.js",
+  "es2015": "../fesm2015/omnichannel2-commercial-plataform-wallet-management-front-common-config.js",
+  "esm5": "../esm5/config/omnichannel2-commercial-plataform-wallet-management-front-common-config.js",
+  "esm2015": "../esm2015/config/omnichannel2-commercial-plataform-wallet-management-front-common-config.js",
+  "fesm5": "../fesm5/omnichannel2-commercial-plataform-wallet-management-front-common-config.js",
+  "fesm2015": "../fesm2015/omnichannel2-commercial-plataform-wallet-management-front-common-config.js",
+  "typings": "omnichannel2-commercial-plataform-wallet-management-front-common-config.d.ts",
+  "sideEffects": false,
+  "name": "@omnichannel2-commercial-plataform-wallet-management/front-common/config"
+}
